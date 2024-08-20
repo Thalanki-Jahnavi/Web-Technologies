@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ott</title>
+</head>
+<body>
+  <h1>Local Machine</h1>
+<form onsubmit="SaveData()">
+    <label for="username ">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="mobile-number">Mobile Number:</label>
+    <input type="text" id="mobile-number" name="mobile-number"><br><br>
+    <input type="reset">
+  </form>
+  <script>
+    function SaveData(){
+      localStorage.setItem("username",document.getElementById("username",value));
+      localStorage.setItem("mobile-number",document.getElementById("mobile-number",value))
+    }
+    function retrieveData(){
+      document.getElementById("username").value=localStorage.getItem("username");
+      document.getElementById("mobile-number").value=localStorage.getItem("mobile-number");
+    }
+    retrieveData();
+  </script>
+</body>
+</html>  
